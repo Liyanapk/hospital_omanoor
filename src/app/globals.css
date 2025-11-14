@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+/* Container widths */
+.container-fixed {
+  @apply w-full mx-auto px-4 sm:px-6 lg:px-8;
+  max-width: 1440px; /* Adjust this value based on your design */
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
