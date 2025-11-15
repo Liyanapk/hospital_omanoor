@@ -10,7 +10,7 @@ export default function Footer(){
              Ponnad, near Cheecode, Malappuram District, Kerala, 673645.
             </p>
             <p className="text-slate-400">Phone: 0483-2728400</p>
-            {/* <p className="text-slate-400">Email: chc.omanur@gov.in</p> */}
+            <p className="text-slate-400">Email: mophcomanur@gmail.com</p>
           </div>
           <div className="text-slate-400">
             <p>© {new Date().getFullYear()} Community Health Centre Omanur. All rights reserved.</p>
