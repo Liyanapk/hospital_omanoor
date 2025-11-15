@@ -29,7 +29,7 @@ const fadeInUp = {
 export default function StaffSection({ staffStats }) {
   return (
     <section id="staff" className="space-y-6 py-12">
-      <div className="container-fixed">
+      <div className="">
         <div className="flex flex-col gap-4 text-center md:text-left">
           <motion.p 
             className="text-sm font-semibold uppercase tracking-[0.3em] text-blue-700"
@@ -61,7 +61,7 @@ export default function StaffSection({ staffStats }) {
           {staffStats.map((stat, index) => (
             <motion.div
               key={index}
-              className="group relative overflow-hidden rounded-2xl bg-white p-6 shadow-lg ring-1 ring-slate-200 transition-all hover:shadow-xl hover:ring-2 hover:ring-blue-500"
+              className="group relative overflow-hidden rounded-2xl bg-white p-6 shadow-lg ring-1 ring-slate-200 transition-all hover:shadow-xl hover:ring-2 hover:ring-blue-500 "
               variants={fadeInUp}
               whileHover={{ y: -5 }}
             >

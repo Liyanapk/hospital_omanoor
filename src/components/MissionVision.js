@@ -34,7 +34,7 @@ export default function MissionVision({ mission, vision }) {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-transparent via-white/50 to-transparent" />
       </div>
 
-      <div className="container-fixed">
+      <div className="">
         <motion.div 
           className="grid gap-8 md:grid-cols-2"
           variants={staggerContainer}
@@ -45,7 +45,7 @@ export default function MissionVision({ mission, vision }) {
           {/* Mission Card */}
           <motion.div 
             variants={fadeInUp}
-            className="group relative bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 border border-slate-100"
+            className="group relative bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300  border border-slate-100"
           >
             <div className="absolute -top-3 -left-2 w-16 h-16  flex items-center justify-center text-blue-600 ">
               <HeartPulse className="w-8 h-8" />
@@ -69,7 +69,7 @@ export default function MissionVision({ mission, vision }) {
           {/* Vision Card */}
           <motion.div 
             variants={fadeInUp}
-            className="group relative bg-gradient-to-br from-blue-600 to-sky-600 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
+            className="group relative bg-gradient-to-br from-blue-600 to-sky-600 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 "
           >
 <div className="absolute -top-3 -left-2 w-16 h-16  flex items-center justify-center text-white ">
               <HeartPulse className="w-8 h-8" />
