@@ -12,7 +12,7 @@ const fadeInUp = {
         <div className="mt-16">
                 {/* FACILITIES */}
           <section id="facilities" className="space-y-10">
-            <div className="flex justify-between items-end">
+            <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
                 <div className="flex flex-col gap-2 text-center md:text-left">
                 <p className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">
                     Facility Readiness
@@ -23,7 +23,7 @@ const fadeInUp = {
                 </div>
                 <Link
                 href="/facility"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-semibold text-white bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 rounded-full shadow-md hover:shadow-lg transition-all duration-200 transform hover:-translate-y-0.5"
+                className="inline-flex items-center justify-center gap-2 self-center rounded-full px-6 py-3 text-sm font-semibold text-white bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 shadow-md hover:shadow-lg transition-all duration-200 transform hover:-translate-y-0.5 md:self-auto"
                 >
                 View All
                 <svg 
@@ -59,7 +59,7 @@ const fadeInUp = {
                         {section.images.map((src) => (
                           <div
                             key={src}
-                            className="relative h-48 overflow-hidden rounded-2xl shadow-sm sm:h-40"
+                            className="relative h-50 overflow-hidden  sm:h-48"
                           >
                             <Image
                               src={src}

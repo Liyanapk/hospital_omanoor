@@ -15,6 +15,10 @@ export const metadata = {
   title: "Community Health Centre Omanur",
   description:
     "Government hospital website for Community Health Centre Omanur showcasing services, staff, and facilities.",
+  icons: {
+    icon: "/logo.png",
+    shortcut: "/logo.png",
+  },
 };
 
 export default function RootLayout({ children }) {

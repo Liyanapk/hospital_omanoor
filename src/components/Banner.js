@@ -21,10 +21,9 @@ export default function Banner({ emblemPlaceholders }) {
   return (
     <motion.section
       id="about"
-      className="relative min-h-[480px] overflow-hidden text-white sm:min-h-[540px] lg:min-h-[640px] flex flex-col"
+      className="relative flex flex-col overflow-hidden text-white min-h-[480px] sm:min-h-[540px] lg:min-h-[680px] py-4"
       initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.4 }}
+      animate="visible"
       variants={fadeInUp}
     >
       <div className="absolute inset-0">
@@ -49,18 +48,18 @@ export default function Banner({ emblemPlaceholders }) {
       </div>
       <div className="relative z-10 flex-1 flex items-center">
         <div className="container-fixed w-full">
-          <div className="grid gap-10 md:grid-cols-2">
-            <div className="space-y-6">
+          <div className="grid gap-10 lg:grid-cols-2 items-center">
+            <div className="space-y-6 text-center lg:text-left">
               <p className="text-sm uppercase tracking-[0.3em] text-sky-200">
                 COMMUNITY HEALTH CENTRE OMANUR
               </p>
-              <h1 className="text-4xl font-semibold leading-tight text-white md:text-5xl">
+              <h1 className="text-4xl font-semibold leading-tight text-white sm:text-4xl lg:text-5xl">
                 Accessible healthcare with compassionate government services.
               </h1>
-              <p className="text-lg text-slate-100 md:max-w-xl">
+              <p className="text-lg text-slate-100 sm:text-lg lg:max-w-xl mx-auto lg:mx-0">
                 Your trusted government healthcare center for safe and reliable medical services.
               </p>
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap items-center justify-center gap-4 lg:justify-start">
                 <a
                   href="#services"
                   className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-blue-900 shadow-lg transition hover:-translate-y-0.5"
@@ -75,8 +74,7 @@ export default function Banner({ emblemPlaceholders }) {
                 </a>
               </div>
             </div>
-            {/* Empty div to maintain grid layout */}
-            <div />
+           
           </div>
         </div>
       </div>
@@ -84,24 +82,22 @@ export default function Banner({ emblemPlaceholders }) {
       {/* Emblems container positioned at bottom right */}
       <div className="relative z-10">
         <div className="container-fixed w-full">
-          <div className="flex justify-end pb-4 ">
-            <div className="">
-              <div className="grid grid-cols-5 gap-10">
-                {emblemPlaceholders.map((src, idx) => (
-                  <div
-                    key={src}
-                    className="flex h-14 w-14 items-center justify-center rounded-full bg-white/95 shadow-lg"
-                  >
-                    <Image
-                      src={src}
-                      alt={`Government emblem placeholder ${idx + 1}`}
-                      width={48}
-                      height={48}
-                      className="h-10 w-10 rounded-full object-cover"
-                    />
-                  </div>
-                ))}
-              </div>
+          <div className="flex justify-center pb-6 lg:justify-end ">
+            <div className="flex  justify-center gap-4 sm:gap-6 mt-4">
+              {emblemPlaceholders.map((src, idx) => (
+                <div
+                  key={src}
+                  className="flex w-12 h-12 md:h-14 md:w-14 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-white/95 shadow-lg"
+                >
+                  <Image
+                    src={src}
+                    alt={`Government emblem placeholder ${idx + 1}`}
+                    width={48}
+                    height={48}
+                    className="md:h-10 md:w-10 h-8 w-8 rounded-full object-cover"
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </div>

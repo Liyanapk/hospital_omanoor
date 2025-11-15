@@ -48,9 +48,9 @@ export default function Services({ serviceCategories = [], fieldLevelServices = 
  
 
         </motion.div>
-        <div className="flex items-center justify-between">
-             <div className="flex flex-col gap-2  pb-0 sm:items-start sm:justify-between">
-              <span className={`flex items-center w-fit  text-[22px] font-semibold `}>
+        <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+             <div className="flex flex-col gap-2 text-center md:text-left pb-0 sm:items-start sm:justify-between">
+              <span className={`flex items-center justify-center md:justify-start w-full md:w-fit text-[22px] font-semibold`}>
                 <span
                   aria-hidden="true"
                   className="w-2 h-2 bg-blue-600 rounded-full mr-3 inline-block"
@@ -61,7 +61,7 @@ export default function Services({ serviceCategories = [], fieldLevelServices = 
               </p>
             </div>
 
-          <div className="flex flex-col items-end">
+          <div className="flex flex-col items-center md:items-end">
          <Link
               href="/services"
               className="inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-semibold text-white bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 rounded-full shadow-md hover:shadow-lg transition-all duration-200 transform hover:-translate-y-0.5"

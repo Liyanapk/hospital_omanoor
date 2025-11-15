@@ -3,77 +3,188 @@ import Footer from "@/components/Footer";
 import InnerNavbar from "@/components/InnerNavbar";
 import { motion } from "framer-motion"
 import Image from "next/image"
+import Link from "next/link"
 
 const facilitySections = [
   {
     title: "PEST & ANIMAL CONTROL",
     images: [
-      "https://images.unsplash.com/photo-1414446483597-8d8f792bfe39?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1474533410427-a23da4fd49e5?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=80",
+      "/pest_controll/pest1.png",
+      "/pest_controll/pest2.png",
+      "/pest_controll/pest3.png",
     ],
-    points: ["Monthly fogging & vector monitoring", "Secure waste holding units", "Partnership with local health inspectors"],
+    points: ["No Stray Animal", "Cattle Trap at the Entrance", "Pest Control","Anti-termite","Mosquito free Environment"],
   },
   {
     title: "HOSPITAL FACILITY",
     images: [
-      "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1504439904031-93ded9f93eaa?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1504814532849-cdda8451574e?auto=format&fit=crop&w=800&q=80",
+     "/hospital_facility/hos1.png",
+     "/hospital_facility/hos2.png",
+     "/hospital_facility/hos3.png",
+
     ],
-    points: ["Digitized patient flow", "Barrier-free entryways", "Green waiting lounges"],
+    points: ["Front area are well maintained", "Internal Roads and pathways are clean", "Green Area Secured with  Fence","Herbal Garden"],
   },
   {
-    title: "Maintenance of Open Areas",
+    title: "Maintenance of Open areas",
     images: [
-      "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1459664018906-085c36f472af?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=800&q=80",
+     "/maintanance/main1.png",
+     "/maintanance/main2.png",
+     "/maintanance/main3.png",
     ],
-    points: ["Tree-lined circulation paths", "Rainwater drainage audits", "Community garden patches"],
+    points: ["No abandoned/ dilapidated buildings", "No Water logging in open areas", "No thoroughfare/ general traffic","Open areas are maintained"],
   },
   {
     title: "Hospital/Facility Appearance",
     images: [
-      "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1503435980610-a51f3ddfee50?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1503435832755-24fce3cfa5ef?auto=format&fit=crop&w=800&q=80",
+      "/maintanace/main1.png",
+      "/maintanace/main2.png",
+      "/maintanace/main3.png",
+       "/maintanace/main4.png",
     ],
-    points: ["Unified signage & bilingual boards", "Weekly paint and polish checks", "Natural daylight focus"],
+    points: ["Walls are well-plastered and painted ", "Name of the facility displayed", "Uniform signage system","No unwanted/outdated posters"],
   },
   {
-    title: "Infrastructure Maintenance",
+    title: "Infrastructure maintenance",
     images: [
-      "https://images.unsplash.com/photo-1487094760285-9535f08817fc?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=800&q=80",
+      "/infra/infra1.png",
+      "/infra/infra2.png",
+ 
     ],
-    points: ["Preventive electrical audits", "Dedicated biomedical upkeep"],
+    points: ["Facility Infrastructure", "System of Periodic Maintenance ","Electric wiring and fitting","Intact boundary wall and  functional gates at entry "],
   },
   {
     title: "Illumination",
     images: [
-      "https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80",
+     "/illumination/illu1.png",
+     "/illumination/illu2.png",
+     "/illumination/illu3.png",
     ],
-    points: ["100% LED retrofits", "Emergency bay lighting redundancies"],
+    points: ["Illumination in circulation areas", "Illumination in Indoor areas","Illumination in front of facility  and access road","Energy efficient bulbs"],
   },
   {
-    title: "Maintenance of Furniture & Fixtures",
+    title: "Maintenance of Furniture and Fixtures ",
     images: [
-      "https://images.unsplash.com/photo-1455778977538-d0d636e2c09b?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1471295253337-3ceaaedca402?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1426024120108-99cc76989c71?auto=format&fit=crop&w=800&q=80",
+     "/maintance/maint1.png",
+     "/maintance/maint2.png",
+   
     ],
-    points: ["Weekly safety inspections", "Dedicated ergonomic upgrades", "Refurbished seating for attendants"],
+    points: ["Windows and Doors are intact", "Patient beds and Mattress", "Trolleys, Stretchers, Wheel chairs etc.","Furniture at the nursing station,  staff room, administrative office","Preventive maintenance of furniture and  Fixtures"],
   },
   {
-    title: "Removal of Junk Material",
+    title: "Removal of Junk material",
     images: [
-      "https://images.unsplash.com/photo-1455906876003-298dd8c44b0f?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1477768663691-75454fd8e870?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1530023367847-a683933f4176?auto=format&fit=crop&w=800&q=80",
+      "/removal/remove1.png",
+      "/removal/remove2.png",
+  
     ],
-    points: ["Bi-weekly scrap segregation", "Authorized vendor disposal", "Documentation & audit trails"],
+    points: ["Junk material in patient care areas", "No Junk materials in Open areas and  corridors", "No Junk material in critical  service area","Demarcated space for keeping  condemned junk material"],
+  },
+    {
+    title: "Water conservation",
+    images: [
+      "/water/water1.png"
+  
+    ],
+    points: ["Adequate quantity and quality", "Maintenance of water supply system", "No leaking taps and pipes","Promoting water conservation","Functional rain water harvesting system"],
+  },
+   {
+    title: "Work place management",
+    images: [
+      "/workmanage/work1.png",
+      "/workmanage/work2.png",
+      "/workmanage/work3.png",
+      
+    ],
+    points: ["Sorting useful and unnecessary articles at  work station", "Arranging the useful articles, records in systematic manner", "Label the articles in identifiable  manner","Work stations are clean and dust free","Staff trained for work place  management"],
+  },
+   {
+    title: "Clean Circulation areas",
+    images: [
+      "/circulation/circ1.png",
+      "/circulation/circ2.png",
+      "/circulation/circ3.png",
+      
+    ],
+    points: ["No dirt/ Grease/ stains ", "No cobwebs/ Bird nest/ dust on walls and  roofs of corridors ", "Wet mop of corridors at least twice in a day",],
+  },
+     {
+    title: "Cleanliness of Ward",
+    images: [
+      "/ward/ward1.png",
+    ],
+    points: ["No dirt/ Grease/ stains  ", "No cobwebs/ Bird nest/ dust on walls and  roofs of corridors ","Wet mop of corridors at least thrice in a day","Rigorously cleaned with scrubbing/  flooding once in a week"],
+  },
+     {
+    title: "Cleanliness 0f Procedure area",
+    images: [
+     "/procedure/procedure1.png",
+     "/procedure/procedure2.png",
+     "/procedure/procedure3.png",
+    ],
+    points: ["No dirt ,grease, Stains and cobwebs ", "Procedure area cleaned twice in a Day/after every Surgery ","Rigorously cleaned with scrubbing/  flooding once in a week"],
+  },
+    {
+    title: "Cleanliness of OPD",
+    images: [
+     "/opd/opd1.png",
+     
+    ],
+    points: ["No dirt/ Grease/ stains  ", "No cobwebs/ Bird nest/ dust on walls and  roofs of corridors  ","OP cleaned thrice in a day","Rigorously cleaned with scrubbing/  flooding once in a month"],
+  },
+    {
+    title: "Cleanliness 0f Lab and Pharmacy",
+    images: [
+     "/lab/lab1.png",
+     "/lab/lab2.png"
+     
+    ],
+    points: ["No dirt ,grease, Stains and cobwebs ", "Procedure area cleaned thrice in a Day"],
+  },
+   {
+    title: "Cleanliness 0f Auxiliary Area",
+    images: [
+     "/auxilary/aux1.png",
+     "/auxilary/aux2.png"
+     
+    ],
+    points: ["No dirt ,grease, Stains and cobwebs ", "These area are cleaned twice in a Day","Rigorously cleaned with scrubbing","flooding once in a month"],
+  },
+     {
+    title: "Cleanliness 0f Toilet",
+    images: [
+     "/toilet/toilet1.png",
+     "/toilet/toilet2.png"
+     
+    ],
+    points: ["No dirt/ Grease/ stains  ", "No foul smell ","Availability of running water  and functional cisterns ","Cleaning of toilets ","Dry Floors "],
+  },
+     {
+    title: "Use of standard material & equipment for cleaning",
+    images: [
+     "/cleaning/clean1.png",
+     "/cleaning/clean2.png"
+     
+    ],
+    points: ["Availability of Detergent Disinfectant  for cleaning ","Using correct concentration of cleaning  solution","Buckets and carts for mopping","Cleaning equipment"],
+  },
+     {
+    title: "Use of standards methods for  cleaning ",
+    images: [
+     "/standard/stand1.png",
+     "/standard/stand2.png"
+     
+    ],
+    points: ["3 Bucket system for cleaning","Unidirectional method and outward  mopping","No use of brooms in patient care  areas.","Separate mops for critical and  semi critical areas .","Disinfection and washing of mops  after every cleaning cycle ."],
+  },
+    {
+    title: "Monitoring of cleanliness activities ",
+    images: [
+     "/monitering/monit1.png",
+     "/monitering/monit2.png"
+     
+    ],
+    points: ["Housekeeping checklists in toilets","Housekeeping checklists in patient care areas","Housekeeping checklists in procedure areas","Designated person for monitoring .","Monitoring of adequacy and quality of  material used for cleaning."],
   },
 ];
 
@@ -91,32 +202,41 @@ const fadeInUp = {
         <div className="min-h-screen bg-gradient-to-b from-white via-slate-50 to-blue-50">
                    <InnerNavbar />
                 {/* FACILITIES */}
-          <section id="facilities" className="space-y-10 container-fixed mt-16 mb-16">
+          <section id="facilities" className="space-y-10 container-fixed mt-8 mb-20">
+             <Link
+                href="/"
+                className="mt-4 inline-flex items-center justify-center gap-2 self-center rounded-full border-none px-0 py-2 text-sm font-semibold text-blue-600 transition  md:self-start"
+              >
+                ← Back to Home
+              </Link>
             <div className="flex flex-col gap-2 text-center md:text-left">
+              
               <p className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">
                 Facility Readiness
               </p>
               <h2 className="text-3xl font-semibold text-slate-900 md:text-4xl">
                 Facilities We Provides
               </h2>
+             
             </div>
+
             <div className="space-y-10">
               {facilitySections.map((section, idx) => (
                 <motion.div
                   key={section.title}
-                  className="grid gap-6 rounded-3xl bg-white p-6 shadow-lg ring-1 ring-slate-100 lg:grid-cols-2"
+                  className="grid gap-6 p-6  ring-1 ring-slate-100 lg:grid-cols-2"
                   variants={fadeInUp}
                   initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true, amount: 0.2 }}
+                  animate="visible"
                 >
                   {idx % 2 === 0 ? (
                     <>
                       <div className="grid gap-4 sm:grid-cols-2">
                         {section.images.map((src) => (
-                          <div
+                          <motion.div
                             key={src}
-                            className="relative h-48 overflow-hidden rounded-2xl shadow-sm sm:h-40"
+                            className="relative h-48 overflow-hidden sm:h-48"
+                            variants={fadeInUp}
                           >
                             <Image
                               src={src}
@@ -125,7 +245,7 @@ const fadeInUp = {
                               sizes="(min-width: 1024px) 40vw, (min-width: 640px) 50vw, 100vw"
                               className="object-cover"
                             />
-                          </div>
+                          </motion.div>
                         ))}
                       </div>
                       <div className="flex flex-col justify-center">
@@ -134,14 +254,14 @@ const fadeInUp = {
                         </h3>
                         <ul className="mt-4 space-y-3 text-slate-600">
                           {section.points.map((point) => (
-                            <li key={point} className="flex items-start gap-3">
-                              <span className="mt-1 h-3 w-3 rounded-full bg-blue-500" />
-                              <span>{point}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </>
+                          <motion.li key={point} className="flex items-start gap-3" variants={fadeInUp}>
+                            <span className="mt-1 h-3 w-3 rounded-full bg-blue-500" />
+                            <span>{point}</span>
+                          </motion.li>
+                        ))}
+                      </ul>
+                    </div>
+                    </> 
                   ) : (
                     <>
                       <div className="flex flex-col justify-center">
@@ -150,18 +270,19 @@ const fadeInUp = {
                         </h3>
                         <ul className="mt-4 space-y-3 text-slate-600">
                           {section.points.map((point) => (
-                            <li key={point} className="flex items-start gap-3">
-                              <span className="mt-1 h-3 w-3 rounded-full bg-blue-500" />
-                              <span>{point}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
+                          <motion.li key={point} className="flex items-start gap-3" variants={fadeInUp}>
+                            <span className="mt-1 h-3 w-3 rounded-full bg-blue-500" />
+                            <span>{point}</span>
+                          </motion.li>
+                        ))}
+                      </ul>
+                    </div>
                       <div className="grid gap-4 sm:grid-cols-2">
                         {section.images.map((src) => (
-                          <div
+                          <motion.div
                             key={src}
-                            className="relative h-48 overflow-hidden rounded-2xl shadow-sm sm:h-40"
+                            className="relative h-48 overflow-hidden  sm:h-48"
+                            variants={fadeInUp}
                           >
                             <Image
                               src={src}
@@ -170,7 +291,7 @@ const fadeInUp = {
                               sizes="(min-width: 1024px) 40vw, (min-width: 640px) 50vw, 100vw"
                               className="object-cover"
                             />
-                          </div>
+                          </motion.div>
                         ))}
                       </div>
                     </>

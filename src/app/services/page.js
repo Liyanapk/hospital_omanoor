@@ -61,8 +61,7 @@ export default function ServicesPage() {
                         className="space-y-8"
                         variants={fadeInUp}
                         initial="hidden"
-                        whileInView="show"
-                        viewport={{ once: true, amount: 0.2 }}
+                        animate="show"
                     >
                         <div className="flex items-center justify-between flex-wrap gap-6">
                             <div className="flex flex-col gap-2">
@@ -110,8 +109,7 @@ export default function ServicesPage() {
                                 className="space-y-6 rounded-3xl bg-gradient-to-r from-blue-50 to-sky-50 p-8 shadow-lg ring-1 ring-slate-100"
                                 variants={fadeInUp}
                                 initial="hidden"
-                                whileInView="show"
-                                viewport={{ once: true, amount: 0.2 }}
+                                animate="show"
                             >
                                 <div className="grid gap-4 md:grid-cols-2">
                                     {category.items.map((service) => (

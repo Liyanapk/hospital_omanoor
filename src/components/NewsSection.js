@@ -1,7 +1,9 @@
-import { motion } from "framer-motion"
+import { useState } from "react"
 import Image from "next/image"
 
 export default function NewsSection ( {newsImages} ){
+    const [isPaused, setIsPaused] = useState(false)
+
     return(
         <div className="mt-10">
              {/* NEWS MARQUEE */}
@@ -14,14 +16,20 @@ export default function NewsSection ( {newsImages} ){
               Community updates at a glance
             </h2>
           </div>
-          <div className="overflow-hidden rounded-2xl bg-white p-4 shadow-lg">
-            <motion.div
-              className="flex gap-6"
-              animate={{ x: ["0%", "-50%"] }}
-              transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
+          <div
+            className="overflow-hidden p-4"
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}
+          >
+            <div
+              className="news-marquee-track flex gap-6"
+              style={{
+                animationPlayState: isPaused ? "paused" : "running",
+                animationDuration: "18s",
+              }}
             >
               {[...newsImages, ...newsImages].map((src, idx) => (
-                <div key={`${src}-${idx}`} className="relative h-56 w-80 shrink-0 overflow-hidden rounded-2xl">
+                <div key={`${src}-${idx}`} className="relative h-56 w-80 shrink-0 overflow-hidden">
                   <Image
                     src={src}
                     alt="Hospital news"
@@ -31,7 +39,7 @@ export default function NewsSection ( {newsImages} ){
                   />
                 </div>
               ))}
-            </motion.div>
+            </div>
           </div>
         </section>
         </div>
