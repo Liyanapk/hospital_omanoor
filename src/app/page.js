@@ -12,6 +12,8 @@ import FieldLevelServices from "@/components/FieldLevelServices";
 import NewsSection from "@/components/NewsSection";
 import Facility from "@/components/Facility";
 import ImageGallery from "@/components/ImageGallery";
+import { FileText } from "lucide-react";
+import AnnualReports from "@/components/AnnualReports";
 
 const navLinks = [
   { label: "About", href: "#about" },
@@ -230,11 +232,10 @@ export default function Home() {
           <Services serviceCategories={serviceCategories} fieldLevelServices={fieldLevelServices} />
           <FieldLevelServices services={fieldLevelServices} />
           <NewsSection newsImages={newsImages} />
+          <AnnualReports/>
           <Facility facilitySections={facilitySections}/>
           <ImageGallery gallerySections={gallerySections} />
-      
 
-          
         </div>
 
         {/* FOOTER */}
